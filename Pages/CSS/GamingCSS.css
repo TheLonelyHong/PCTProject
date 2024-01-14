@@ -1,0 +1,117 @@
+.gaming-title h1{
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    padding:20px 100px 20px 100px;
+    font-size: 40px;
+}
+
+.gaming-gif-container{
+    background: linear-gradient(to right bottom , rgba(0,0,0,0.8) , rgba(0,0,0,0.8)) , url("../IMAGES/Gaming/SteamDeckGif.gif");
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    max-height:100%;
+    padding-bottom: 650px;
+}
+
+.gaming-gif-container h1{
+    text-align: center;
+    font-size: 35px;
+    color:#fff;
+    padding-top: 20px;
+}
+
+.gaming-images-container{
+    padding:30px 100px 30px 100px;
+    position:relative;
+    overflow: hidden;
+}
+
+.gaming-images-title{
+    padding:20px 100px 20px 100px;
+}
+
+.gaming-images-title h1{
+    text-align: center;
+    font-size:30px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.gaming-list{
+    padding:20px 50px 20px 50px;
+}
+
+.gaming-images-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.gaming-images-item{
+    border:1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.gaming-images-item:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.gaming-image{
+    width:300px;
+    height:300px;
+    object-fit: contain;
+}
+
+.gaming-desc{
+    padding:20px 100px 20px 100px;
+}
+
+.gaming-desc h1{
+    text-align: center;
+    font-size:30px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+
+.gaming-desc p{
+    padding:10px 100px 10px 100px;
+    font-size:28px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:1100px){
+    .gaming-title h1{
+        font-size: 35px;
+    }
+    .gaming-gif-container{
+        padding-bottom: 350px;
+    }
+    .gaming-desc{
+        padding:20px 10px 20px 10px;
+    }
+    .gaming-desc p{
+        padding:10px 10px 10px 10px;
+        font-size:24px;
+    }
+    .gaming-images-container{
+        padding:10px 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .gaming-title h1{
+        font-size: 30px;
+    }
+    .gaming-gif-container{
+        padding-bottom: 250px;
+    }
+}

@@ -1,0 +1,484 @@
+:root{
+    --box_shadow:1px 4px 6px -1px rgba(0,0,0,0.3);
+    --black:#222;
+    --white:#ddd;
+    --green:#45AD1B;
+    --grey:#C2C2C2;
+    --ccc:#ccc;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky{
+    position: sticky;
+    top:0;
+    background:#fff;
+    z-index: 1000000;
+}
+
+.header-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    color: var(--black);
+    box-shadow: var(--box_shadow);
+    position: relative;
+}
+
+.title-link{
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.nav-bar{
+    list-style: none;
+    display:flex;
+    gap: 5rem;
+    margin-right: 100px;
+}
+
+.nav-link{
+    font-size:20px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    position: relative;
+    cursor: pointer;
+    color:var(--black);
+    text-decoration: none;
+}
+
+.nav-link::after{
+    content: '';
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    display:block;
+    width:0;
+    height:3px;
+    background:var(--green);
+    margin:auto;
+    border-radius: 20px;
+}
+
+.nav-link:hover::after{
+    width:100%;
+    transition: 0.5s;
+}
+
+.nav-img{
+    width:20px;
+    height:20px;
+}
+
+.nav-link:hover .nav-img{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+.menu-container{
+    display:none;
+}
+
+.menu-img{
+    width:20px;
+    height:20px;
+    object-fit: cover;
+    cursor: pointer;
+    padding:10px;
+}
+
+.menu-img-container:hover .menu-nav-container{
+    top:0%;
+    left:0%;
+    transition:0.5s;
+}
+
+.menu-img:hover{
+    background:var(--green);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.menu-nav-container{
+    width: 100%;
+    max-height: 100%;
+    position:absolute;
+    background:var(--white);
+    top:-400%;
+    left:0%;
+}
+
+.menu-nav-img{
+    width:20px;
+    height:20px;
+}
+
+.menu-nav-bar{
+    list-style: none;
+    background: var(--white);
+}
+
+.menu-nav-item{
+    padding:30px
+}
+
+.menu-nav-link{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    cursor: pointer;
+    color: #222;
+    text-decoration: none;
+}
+
+.menu-nav-item:hover{
+    background: var(--green);
+    transition: 0.5s;
+}
+
+.menu-nav-img:hover{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.nav-pages{
+    list-style: none;
+    background:var(--black);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.nav-pages-link{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-pages-item{
+    padding:10px 20px 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-pages-item:hover{
+    background: var(--white);
+    color: var(--black);
+}
+
+.nav-pages-link:hover{
+    color: var(--black);   
+}
+
+.nav-pages-container{
+    position:absolute;
+    z-index: 100;
+    max-width:100%;
+    max-height:100%;
+    display:none;
+    margin-top:1px;
+    margin-left:-20px;
+    border:1px solid #000;
+    border-radius: 10px;
+}
+
+.nav-pages-hover:hover .nav-pages-container{
+    display:block;
+}
+
+.section-one{
+    position: relative;
+    z-index: -100;
+}
+
+.section-header{
+    background: linear-gradient(to top left , rgba(0, 0, 0,0.1) , rgba(0, 0, 0,0.9)) , url("../IMAGES/Home/background.jpg");
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.section-text{
+    text-transform: capitalize;
+    padding:20px 30px 300px 30px;
+}
+
+.section-text h1{
+    font-size:100px;
+    font-weight:400;
+    color:var(--white)
+}
+
+.section-text h2{
+    font-size: 50px;
+    font-weight:300;
+    color:var(--white);
+    padding:10px 0 10px 0;
+}
+
+.title-section{
+    font-size: 40px;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.title-words{
+    font-size: 35px;
+    font-style: normal;
+}
+
+.section-text h3{
+    font-weight: 200;
+    color: var(--white);
+    padding:50px 0px 10px 20px;
+}
+
+.section-text h4{
+    font-weight:100;
+    color:var(--white);
+    padding:30px 0px 10px 10px;
+    font-size:20px;
+    text-decoration: underline;
+}
+
+.section-members{
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color:var(--white);
+    padding:10px 0px 250px 20px;
+}
+
+.section-members h5{
+    font-size: 20px;
+    font-weight:100;
+}
+
+.section-img{
+    max-width:500px;
+    max-height:500px;
+    position: absolute;
+    bottom:80px;
+    right:50px;
+}
+
+.introduction, .effect-section{
+    padding:50px 100px 100px 100px;
+}
+
+.introduction h1, .effect-section h1{
+    text-align: center;
+    font-weight: 300;
+    font-size:30px;
+    padding:10px 0 10px 0;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.introduction p, .effect-section p{
+    padding:20px 100px 20px 100px;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-weight:200;
+    font-size:18px;
+}
+
+.devices-section{
+    padding:50px 100px 50px 100px;
+    background:transparent;
+    border-top: 1px solid var(--ccc);
+    border-bottom: 1px solid var(--ccc);
+}
+
+.devices-section h1{
+    text-align: center;
+    font-weight: 300;
+    font-size:30px;
+    padding:10px 0 10px 0;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.devices-images-group{
+    padding:50px 100px 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.device-image-frame{
+    max-width:250px;
+    max-height:300px;
+    border:1px solid #000;
+    background:#fff;
+    padding:30px 0px 30px 0px;
+    border-radius: 10px;
+}
+
+.device-image-frame:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
+.centerbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images-text{
+    text-align: center;
+    font-weight: 200;
+}
+
+.images_device{
+    max-width:200px;
+    max-height:200px;
+    border-radius: 10px;
+}
+
+.footer{
+    background:var(--black);
+    color:var(--white);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    padding:20px 100px 20px 100px;
+}
+
+.footer h3{
+    font-weight: 200;
+    font-size:18px;
+}
+
+.section-two{
+    position:relative;
+    overflow: hidden;
+}
+
+.menu-nav-link{
+    position: relative;
+}
+
+.nav-menu-pages-container{
+    background-color: #222;
+    color:#ddd;
+    padding:10px 10px 10px 10px;
+    border-radius: 10px;
+    position:absolute;
+    z-index:1000;
+    display:none;
+}
+
+.menu-nav-hover:hover .nav-menu-pages-container{
+    display:block;
+}
+
+.nav-menu-pages{
+    list-style: none;
+}
+
+.nav-menu-pages-item{
+    padding:10px 10px 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-menu-pages-link{
+    text-decoration: none;
+    color:#ddd;
+}
+
+.nav-menu-pages-link:hover{
+    background-color: #ddd;
+    color:#222;
+}
+
+.nav-menu-pages-item:hover{
+    background-color: #ddd;
+    color:#222;
+}
+
+@media screen and (max-width:1100px) {
+    .nav-bar{
+        margin-right:50px;
+    }
+    .section-text h1{
+        font-size: 50px;
+    }
+    .section-text h2{
+        font-size: 30px;
+    }
+    .title-section{
+        font-size: 20px;
+    }
+    .section-img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .introduction p, .effect-section p{
+        padding:50px 0px 50px 0px;
+    }
+    .footer{
+        padding:10px 30px 10px 30px;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .nav-container{
+        display:none
+    }
+    .menu-container{
+        display:block;
+    }
+    .section-members{
+        padding:10px 0px 200px 20px;  
+    }
+    .section-text h1{
+        font-size: 45px;
+    }
+    .section-text h2{
+        font-size: 28px;
+    }
+    .title-section{
+        font-size: 20px;
+    }
+    .section-img{
+        display:none;
+    }
+    .introduction , .effect-section{
+        padding:50px 50px 50px 50px;
+    }
+    .introduction p , .effect-section p{
+        padding:50px 2px 50px 2px;
+    }
+    .devices-section{
+        padding:20px 0px 20px 0px;
+    }
+    .devices-images-group{
+        padding:50px 0px 50px 0px;
+    }
+    .devices-images-group{
+        justify-content: center;
+    }
+    .images_device{
+        max-width:100%;
+        max-height:100%;
+    }
+}

@@ -1,0 +1,162 @@
+.company-title{
+    padding:20px 100px 20px 100px;
+}
+
+.background-effect{
+    animation-name:colourChange;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.company-title h1{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size:28px;
+    text-decoration: underline;
+}
+
+.company-images{
+    padding:20px 60px 10px 60px;
+
+}
+
+.company-images-container{
+    margin-top: 2px;
+}
+
+.company-images h1{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 28px;
+    padding:20px 0 20px 0 ;
+}
+
+.company-images-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+.company-images-item{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.company-image{
+    width:300px;
+    height:200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.company-logo-icon{
+    max-width:100%;
+    max-height:100%;
+    object-fit: cover;
+    opacity: 0.5;
+    position: absolute;
+    right:30px;
+    top:0px;
+    transform: rotateZ(20deg);
+    z-index: -100;
+}
+
+.company-desc{
+    position: relative;
+    overflow: hidden;
+}
+
+.company-desc-image-right{
+    max-width: 100%;
+    max-height:100%;
+    object-fit: cover;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    right:20px;
+    z-index: -1000;
+    transform: rotateZ(20deg);
+}
+
+.company-desc-image-left{
+    width: 300px;
+    height:300px;
+    object-fit: cover;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 0;
+    left:20px;
+    z-index: -1000;
+    transform: rotateZ(-20deg);
+}
+
+.company-desc h1{
+    text-align: center;
+    font-size:28px;
+    letter-spacing: 1px;
+    padding:40px 100px 40px 100px;
+    text-decoration: underline;
+}
+
+.company-desc p{
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size:24px;
+    padding:40px 100px 40px 100px;
+}
+
+@keyframes colourChange {
+    0%{
+        background-color: rgba(194, 254, 192,  0.5);
+        transition: background-color 2s linear;
+    }
+    25%{
+        background-color: rgba(190, 255, 251 , 0.5);
+        transition: background-color 2s linear;
+    }
+    50%{
+        background-color: rgba(255, 191, 254,0.5);
+        transition: background-color 2s linear;
+    }
+    75%{
+        background: rgba(254, 255, 192,0.5);
+        transition: background-color 2s linear;
+    }
+    100%{
+        background-color: rgba(194, 254, 192,  0.5);
+        transition: background-color 2s linear;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .company-title{
+        padding:20px 40px 20px 40px;
+    }
+    .company-title h1{
+        font-size:24px;
+    }
+    .company-images h1{
+        font-size:23px;
+    }
+    .company-images-item{
+        margin-top:2px;
+        margin-bottom: 2px;
+    }
+    .company-desc-image-right{
+        right:0;
+    }
+    .company-desc h1{
+        padding:40px 20px 40px 20px;
+    }
+    .company-desc p{
+        padding:40px 20px 40px 20px;
+        font-size:23px;
+    }
+    .company-image{
+        width:200px;
+    }
+}
